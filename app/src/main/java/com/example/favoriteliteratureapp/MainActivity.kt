@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.favoriteliteratureapp.presentation.author.list.NavGraphs
 import com.example.favoriteliteratureapp.ui.theme.FavoriteLiteratureAppTheme
 import com.ramcosta.composedestinations.DestinationsNavHost
 import com.ramcosta.composedestinations.annotation.Destination
@@ -72,10 +73,10 @@ class MainActivity : ComponentActivity() {
             it.calculateBottomPadding()
 
             navController = rememberNavController()
-//            DestinationsNavHost(
-//                navGraph = NavGraphs.root,
-//                navController = navController as NavHostController,
-//            )
+            DestinationsNavHost(
+                navGraph = NavGraphs.root,
+                navController = navController as NavHostController,
+            )
         }
     }
 
